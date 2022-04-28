@@ -9,12 +9,12 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
-SoloGame/[Ll]ibrary/
-SoloGame/[Tt]emp/
-SoloGame/[Oo]bj/
-SoloGame/[Bb]uild/
-SoloGame/[Bb]uilds/
-SoloGame/Logs
+SoloBulletHell/[Ll]ibrary/
+SoloBulletHell/[Tt]emp/
+SoloBulletHell/[Oo]bj/
+SoloBulletHell/[Bb]uild/
+SoloBulletHell/[Bb]uilds/
+SoloBulletHell/Logs
 
 
 # Never ignore Asset meta data
