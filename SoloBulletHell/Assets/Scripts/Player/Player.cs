@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public int CurrentHealth = 8;
     public int MaxHealth = 8;
     public int HealingFactor = 1;
-
+    public static int DamageDealt = 2;
 
     [Header("UI")]
     public HealthBar healthBar;
