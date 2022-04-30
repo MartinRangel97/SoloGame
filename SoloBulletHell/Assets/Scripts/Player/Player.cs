@@ -11,10 +11,12 @@ public class Player : MonoBehaviour
     public int MaxHealth = 8;
     public int HealingFactor = 1;
     public static int DamageDealt = 2;
+    public float InvulnerabilityBuffer = 1f;
 
     [Header("UI")]
     public HealthBar healthBar;
 
+    public bool CanBeHit = true;
     private Vector2 moveInput;
     private Rigidbody2D rb;
 
@@ -44,13 +46,21 @@ public class Player : MonoBehaviour
 
     public void Damage(int amount)
     {
+
         CurrentHealth -= amount;
         healthBar.SetCurrentHealth();
-        
+        CanBeHit = false;
+        StartCoroutine("InvulnerabilityState");
         if (CurrentHealth <= 0)
         {
             //Game Over
         }
+    }
+
+    private IEnumerator InvulnerabilityState()
+    {
+        yield return new WaitForSeconds(InvulnerabilityBuffer);
+        CanBeHit = true;
     }
 
     public void Heal(int amount)
