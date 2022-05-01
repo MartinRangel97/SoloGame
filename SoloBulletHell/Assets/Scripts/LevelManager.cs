@@ -4,27 +4,36 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public static bool RoundStarted;
+    public int Level;
+    public EnemyManager EnemyManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Level = 1;
+        RoundStart();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if(EnemyManager.EnemyHolder.childCount == 0)
+        {
+            RoundEnd();
+        }
     }
 
-    public static void RoundStart()
+    public void RoundStart()
     {
-        LevelManager.RoundStarted = true;
+        Time.timeScale = 1;
+        int SpawnModifier = 4 + Mathf.RoundToInt(Level/2);
+        //spawn enemies
+        EnemyManager.Spawn(SpawnModifier);
     }
 
-    public static void RoundEnd()
+    public void RoundEnd()
     {
-        LevelManager.RoundStarted = false;
+        //show UI for powerups
+        Time.timeScale = 0;
+        Level += 1;
     }
 }
