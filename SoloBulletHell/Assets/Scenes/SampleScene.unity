@@ -1187,7 +1187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1781f6f406e10e04c868b72f06689135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 0
   EnemyManager: {fileID: 2076216719}
   PowerupMenu: {fileID: 370509715}
 --- !u!4 &129428141
@@ -5617,6 +5616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1255656016}
+  EnemyManager: {fileID: 0}
 --- !u!4 &1634081136
 Transform:
   m_ObjectHideFlags: 0
