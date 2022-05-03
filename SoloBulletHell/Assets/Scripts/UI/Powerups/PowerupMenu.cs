@@ -12,6 +12,11 @@ public class PowerupMenu : MonoBehaviour
 
     public void ShowPowerUP(int amount)
     {
+
+        foreach(Transform child in ButtonHolder)
+        {
+            Destroy(child.gameObject);
+        }
    
         List<PowerupData> SelectedPowerups = new List<PowerupData>();
 

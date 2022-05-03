@@ -11,5 +11,7 @@ public class GameManager : MonoBehaviour
         player.SetBasicStats();
     }
 
+
+
     
 }
