@@ -11,7 +11,7 @@ public class EnemyManager : MonoBehaviour
     public Transform EnemyHolder;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         foreach (Transform child in transform.Find("Spawn Points"))
         {

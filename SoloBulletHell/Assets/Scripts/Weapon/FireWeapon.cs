@@ -11,7 +11,6 @@ public class FireWeapon : MonoBehaviour
 
     [Header("Weapon Modifiers")]
     private float WeaponSpeed = 20f;
-    public float FireRate = 0.15f;
 
     private bool AbleToFire = true;
     private bool IsFiring = false;
@@ -56,7 +55,7 @@ public class FireWeapon : MonoBehaviour
             Rigidbody2D rb = Bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(FirePoint.up * WeaponSpeed, ForceMode2D.Impulse);
             AbleToFire = false;
-            Invoke(nameof(CooldownFinished), FireRate);
+            Invoke(nameof(CooldownFinished), gameObject.GetComponent<Player>().FireRate);
         }
     }
 

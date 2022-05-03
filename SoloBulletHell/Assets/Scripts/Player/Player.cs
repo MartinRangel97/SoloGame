@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     public int HealingFactor = 1;
     public static int DamageDealt = 2;
     public float InvulnerabilityBuffer = 1f;
+    public float FireRate = 1f;
+    public int Pierce = 1;
+    public int Bounce = 1;
 
     [Header("UI")]
     public HealthBar healthBar;
@@ -46,7 +49,6 @@ public class Player : MonoBehaviour
 
     public void Damage(int amount)
     {
-
         CurrentHealth -= amount;
         healthBar.SetCurrentHealth();
         CanBeHit = false;
@@ -71,6 +73,31 @@ public class Player : MonoBehaviour
         if (CurrentHealth > MaxHealth)
         {
             CurrentHealth = MaxHealth;
+        }
+    }
+
+    public void AddPowerup(string name)
+    {
+        switch (name)
+        {
+            case "Pierce":
+                Pierce += int.Parse(Powerups.FindPowerup(name).value.ToString());
+                break;
+            case "Bounce":
+                Bounce += int.Parse(Powerups.FindPowerup(name).value.ToString());
+                break;
+            case "Damage":
+                DamageDealt += int.Parse(Powerups.FindPowerup(name).value.ToString());
+                break;
+            case "Fire Rate":
+                FireRate = (1 - Powerups.FindPowerup(name).value) * FireRate;
+                break;
+            case "Health":
+                MaxHealth += int.Parse(Powerups.FindPowerup(name).value.ToString());
+                break;
+            case "Speed":
+                moveSpeed += Powerups.FindPowerup(name).value;
+                break;
         }
     }
 }
