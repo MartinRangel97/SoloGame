@@ -6,15 +6,16 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [Header("Stats")]
-    public float moveSpeed = 5f;
-    public int CurrentHealth = 8;
-    public int MaxHealth = 8;
-    public int HealingFactor = 1;
-    public static int DamageDealt = 2;
-    public float InvulnerabilityBuffer = 1f;
-    public float FireRate = 1f;
-    public int Pierce = 1;
-    public int Bounce = 1;
+    [SerializeField]
+    public float moveSpeed;
+    public int CurrentHealth;
+    public int MaxHealth;
+    public int HealingFactor;
+    public static int DamageDealt;
+    public float InvulnerabilityBuffer;
+    public float FireRate;
+    public int Pierce;
+    public int Bounce;
 
     [Header("UI")]
     public HealthBar healthBar;
@@ -25,7 +26,8 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();   
+        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     void FixedUpdate()
@@ -99,5 +101,18 @@ public class Player : MonoBehaviour
                 moveSpeed += Powerups.FindPowerup(name).value;
                 break;
         }
+    }
+
+    public void SetBasicStats()
+    {
+        moveSpeed = 5f;
+        CurrentHealth = 8;
+        MaxHealth = 8;
+        HealingFactor = 1;
+        DamageDealt = 2;
+        InvulnerabilityBuffer = 1f;
+        FireRate = 0.1f;
+        Pierce = 1;
+        Bounce = 1;
     }
 }

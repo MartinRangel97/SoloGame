@@ -29,6 +29,7 @@ public class EnemyManager : MonoBehaviour
                 
                 GameObject EnemyNPC = Instantiate(Enemy, new Vector3(Random.Range(SP.localPosition.x + 2f, SP.localPosition.x - 2f), Random.Range(SP.localPosition.y + 2f, SP.localPosition.y - 2f)), SP.localRotation, EnemyHolder);
                 EnemyNPC.GetComponent<AIDestinationSetter>().target = Player.transform;
+                EnemyNPC.GetComponent<Enemy>().SetMaxHealth();
             }
         }
     }

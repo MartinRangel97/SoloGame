@@ -5587,6 +5587,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1634081134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1634081136}
+  - component: {fileID: 1634081135}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1634081135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634081134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10760b1331685f2468b26b8db1f1e6bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1255656016}
+--- !u!4 &1634081136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634081134}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6832989, y: 0.76798534, z: 88.52411}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1640757441
 GameObject:
   m_ObjectHideFlags: 0
@@ -5974,9 +6018,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1517402017932285806, guid: 0cbc6a2e6cb5c184ea70a28038d421e7,
         type: 3}
+      propertyPath: Bounce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517402017932285806, guid: 0cbc6a2e6cb5c184ea70a28038d421e7,
+        type: 3}
+      propertyPath: Pierce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517402017932285806, guid: 0cbc6a2e6cb5c184ea70a28038d421e7,
+        type: 3}
+      propertyPath: FireRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517402017932285806, guid: 0cbc6a2e6cb5c184ea70a28038d421e7,
+        type: 3}
+      propertyPath: MaxHealth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517402017932285806, guid: 0cbc6a2e6cb5c184ea70a28038d421e7,
+        type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1416641245}
+    - target: {fileID: 1517402017932285806, guid: 0cbc6a2e6cb5c184ea70a28038d421e7,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517402017932285806, guid: 0cbc6a2e6cb5c184ea70a28038d421e7,
+        type: 3}
+      propertyPath: CurrentHealth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517402017932285806, guid: 0cbc6a2e6cb5c184ea70a28038d421e7,
+        type: 3}
+      propertyPath: InvulnerabilityBuffer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1517402017932285807, guid: 0cbc6a2e6cb5c184ea70a28038d421e7,
         type: 3}
       propertyPath: m_Camera

@@ -19,7 +19,8 @@ public class Powerup : MonoBehaviour
 
     private void ApplyPowerup()
     {
-        player.AddPowerup(gameObject.name);
+        Debug.Log(transform.GetChild(0).GetComponent<Text>().text);
+        player.AddPowerup(transform.GetChild(0).GetComponent<Text>().text);
         levelManager.RoundStart();
         this.transform.parent.parent.gameObject.SetActive(false);
 

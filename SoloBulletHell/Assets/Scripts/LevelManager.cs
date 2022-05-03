@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public int Level;
+    public static int Level;
     public EnemyManager EnemyManager;
     public PowerupMenu PowerupMenu;
 
