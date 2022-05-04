@@ -100,7 +100,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -131,6 +131,7 @@ MonoBehaviour:
   CurrentHealth: 8
   MaxHealth: 8
   Speed: 5
+  DamageDealt: 2
 --- !u!114 &3620130879461697486
 MonoBehaviour:
   m_ObjectHideFlags: 0

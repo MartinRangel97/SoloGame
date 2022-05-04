@@ -113,6 +113,6 @@ public class Player : MonoBehaviour
         InvulnerabilityBuffer = 1f;
         FireRate = 0.1f;
         Pierce = 2;
-        Bounce = 1;
+        Bounce = 3;
     }
 }

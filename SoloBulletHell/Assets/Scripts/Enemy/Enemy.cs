@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
     IEnumerator DelayDestroyEnemy()
     {
         //Enemy Death animation goes here
-        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
         gameObject.GetComponent<AIPath>().canMove = false;
         yield return new WaitForSeconds(2f);
         Debug.Log("Enemy Dead");

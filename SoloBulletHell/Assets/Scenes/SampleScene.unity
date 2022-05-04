@@ -4156,7 +4156,7 @@ GameObject:
   - component: {fileID: 310678655}
   - component: {fileID: 310678654}
   m_Layer: 3
-  m_Name: WallCollider (2)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4521,7 +4521,7 @@ GameObject:
   - component: {fileID: 479055963}
   - component: {fileID: 479055962}
   m_Layer: 3
-  m_Name: WallCollider
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5487,7 +5487,7 @@ GameObject:
   - component: {fileID: 1577491801}
   - component: {fileID: 1577491800}
   m_Layer: 3
-  m_Name: WallCollider (1)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5688,7 +5688,7 @@ GameObject:
   - component: {fileID: 1684855648}
   - component: {fileID: 1684855647}
   m_Layer: 3
-  m_Name: WallCollider (3)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
