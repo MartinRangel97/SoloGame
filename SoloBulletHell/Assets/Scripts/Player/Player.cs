@@ -96,6 +96,9 @@ public class Player : MonoBehaviour
                 break;
             case "Health":
                 MaxHealth += int.Parse(Powerups.FindPowerup(name).value.ToString());
+                CurrentHealth += int.Parse(Powerups.FindPowerup(name).value.ToString());
+                healthBar.SetMaxHealth();
+                healthBar.SetCurrentHealth();
                 break;
             case "Speed":
                 moveSpeed += Powerups.FindPowerup(name).value;

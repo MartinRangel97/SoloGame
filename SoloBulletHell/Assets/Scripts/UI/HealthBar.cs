@@ -19,6 +19,11 @@ public class HealthBar : MonoBehaviour
         HealthSlider.minValue = Player.MaxHealth;
     }
 
+    private void Update()
+    {
+        HealthText.text = Player.CurrentHealth.ToString() + " / " + Player.MaxHealth.ToString();
+    }
+
     public void SetCurrentHealth()
     {
         HealthText.text = Player.CurrentHealth.ToString() + " / " + Player.MaxHealth.ToString();
