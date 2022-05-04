@@ -14,8 +14,8 @@ public class Player : MonoBehaviour
     public static int DamageDealt;
     public float InvulnerabilityBuffer;
     public float FireRate;
-    public int Pierce;
-    public int Bounce;
+    public static int Pierce;
+    public static int Bounce;
 
     [Header("UI")]
     public HealthBar healthBar;
@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
         DamageDealt = 2;
         InvulnerabilityBuffer = 1f;
         FireRate = 0.1f;
-        Pierce = 1;
+        Pierce = 2;
         Bounce = 1;
     }
 }
